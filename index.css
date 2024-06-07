@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*{
+	font-family: "Manrope", sans-serif;
+}
+p{
+	white-space:nowrap;
+}
+#alert{
+	top: -100%;
+	width: 100%;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	transition: .7s;
+}
+#alert.opened{
+	top: 0;
+}
+#alert p{
+	padding: .8rem 1.2rem;
+	border-radius: 1.2rem;
+	background-color: white;
+}
+#main{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#container{
+	border-radius: 2.5rem;
+	min-width: 79rem;
+	background-color:#f4f4f6;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+#container p:first-child{
+	margin-left:1.7rem;
+	font-size: 1.9rem;
+}
+#container p:nth-child(2){
+	margin-left:1.7rem;
+	font-size: 1.4rem;
+}
+#first{
+	width: 100%;
+	margin: 0;
+	display: flex;
+	align-content: center;
+}
+#first>div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	margin: 0 1.7rem;
+}
+#first div div{
+	display: flex;
+	padding: .5rem 1.2rem;
+	margin: 1.2rem 0;
+	border: 1px solid grey;
+	border-radius: 2.5rem;
+}
+#first div:last-child{
+	align-self: stretch;
+}
+#first div div input{
+	background-color: #f4f4f6;
+	border: none;
+	padding: .7rem;
+	font-size: .9rem;
+	width: 100%;
+}
+#first div div textarea{
+	background-color: #f4f4f6;
+	flex-grow: 2;
+	height: 100%;
+	width: 100%;
+	outline:none;
+	border: none;
+	text-align: start;
+	padding: .8rem;
+	font-size: 1rem;
+}
+#first div div input, #first div div textarea{
+	min-width: 250px;
+}
+#first div div input:focus{
+	outline:none;
+}
+#first div div:not(input, textarea){
+	color: red;
+	font-size: 1.4rem;
+}
+
+#second{
+	display: flex;
+	justify-content: flex-start;
+}
+#second>div:first-child{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin-left:1.7rem;
+}
+#second>div:first-child p{
+	white-space: nowrap;
+	margin: .4rem 0;
+}
+#second>div:first-child p:last-child{
+}
+#delivery{
+	margin: .7rem;
+}
+#delivery a{
+	transition: .3s;
+	white-space: nowrap;
+	border-radius: 2.5rem;
+	color: black;
+	text-decoration: none;
+	font-size: 1rem;
+	margin: 0 .4rem;
+	padding: .6rem 1.7rem;
+}
+#delivery a:last-child{
+	border: 1px solid black;
+}
+#delivery a:first-child{color: white;background: black;}
+
+#second_second{
+	display: flex;
+	flex-direction: column;
+	min-width: 420px;
+}
+#second_second >div:first-child{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.pay_type{
+	display: flex;
+	margin: .7rem 0;
+	font-weight: bold;
+}
+.pay_type img{
+	width: 2.8rem;
+	height: 2.6rem;
+	margin-left: 2rem;
+}
+.pay_type img:first-child{width: 2rem;height: 2rem;
+}
+#pay{
+	align-self: end;
+	margin-right: .2rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+#pay>div{justify-content: center;}
+#pay>div>a{
+	font-weight: bold;
+	font-size: 1.4rem;
+	margin: 0 3rem;
+}
+#final{
+	flex-grow: 2;
+	padding: .8rem 2.3rem; 
+	background-color:black; 
+	color: white; 
+	text-decoration: none; 
+	border-radius: 2.5rem;
+	margin: 1rem 0 0 0;
+}
+@media all and (max-width: 1244px){
+	#container{
+		width: 100%;
+		min-width: unset;
+	}
+	#first{
+		flex-direction: column;
+	}
+	#first div div textarea{
+		height: 222px;
+	}
+	#second{
+		flex-direction: column;
+	}
+	#pay{
+		margin-right: 2rem;
+	}
+}
+@media all and (max-width: 576px) {
+	#delivery{
+		flex-direction: column;
+	}
+	#delivery>a{
+		margin: .5rem .4rem;
+	}
+	#second>div:first-child p {
+		white-space: wrap;
+		text-align: center;
+	}
+	#pay{
+		margin: auto;
+	}
+	#second_second{
+		justify-content: center;
+		align-content: center;
+		min-width: unset;
+	}
+	#container p:nth-child(1){
+		position: relative;
+		right: .5rem;
+		top: 1.2rem;
+	}
+	#container p:nth-child(2){
+		margin-left: .7rem;
+	}	
+}
